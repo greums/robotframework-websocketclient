@@ -1,6 +1,6 @@
 *~
-*.pyc
-*.egg-info/
-build/
+*.py[cod]
+*.egg-info
+.idea
+build
 dist
-env

@@ -1,7 +1,10 @@
 from .keywords import WebSocketClientKeywords
-from .version import VERSION
+from .version import get_version
 
-_version_ = VERSION
+__version__ = get_version()
+
 
 class WebSocketClient(WebSocketClientKeywords):
+
+    ROBOT_LIBRARY_VERSION = __version__
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'

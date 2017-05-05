@@ -1,51 +1,52 @@
 from websocket import create_connection
 
-class WebSocketClientKeywords(object):
 
-	def connect(self, URL, timeout=None, **options):
-		return create_connection(URL,timeout,**options)
+class WebSocketClientKeywords:
 
-	def gettimeout(self, websocket):
-		return websocket.gettimeout()
+    def connect(self, URL, timeout=None, **options):
+        return create_connection(URL, timeout, **options)
 
-	def settimeout(self, websocket, timeout):
-		websocket.settimeout(timeout)
+    def gettimeout(self, websocket):
+        return websocket.gettimeout()
 
-	def getsubprotocol(self, websocket):
-		return websocket.getsubprotocol()
+    def settimeout(self, websocket, timeout):
+        websocket.settimeout(timeout)
 
-	def getstatus(self, websocket):
-		return websocket.getstatus()
+    def getsubprotocol(self, websocket):
+        return websocket.getsubprotocol()
 
-	def getheaders(self, websocket):
-		return websocket.getheaders()
+    def getstatus(self, websocket):
+        return websocket.getstatus()
 
-	def send(self, websocket, message):
-		return websocket.send(message)
+    def getheaders(self, websocket):
+        return websocket.getheaders()
 
-	def send_binary(self, websocket, payload):
-		return websocket.send_binary(payload)
+    def send(self, websocket, message):
+        return websocket.send(message)
 
-	def ping(self, websocket, payload=""):
-		websocket.ping(payload)
+    def send_binary(self, websocket, payload):
+        return websocket.send_binary(payload)
 
-	def pong(self, websocket, payload=""):
-		websocket.pong(payload)
+    def ping(self, websocket, payload=""):
+        websocket.ping(payload)
 
-	def recv(self, websocket):
-		return websocket.recv()
+    def pong(self, websocket, payload=""):
+        websocket.pong(payload)
 
-	def recv_data(self, websocket, control_frame=False):
-		return websocket.recv_data(control_frame)
+    def recv(self, websocket):
+        return websocket.recv()
 
-	def send_close(self, websocket):
-		websocket.send_close()
+    def recv_data(self, websocket, control_frame=False):
+        return websocket.recv_data(control_frame)
 
-	def send_close_with_reason(self, websocket, status, reason):
-		websocket.send_close(status, reason)
+    def send_close(self, websocket):
+        websocket.send_close()
 
-	def close(self, websocket):
-		websocket.close()
+    def send_close_with_reason(self, websocket, status, reason):
+        websocket.send_close(status, reason)
 
-	def close_with_reason(self, websocket, status, reason):
-		websocket.close(status, reason)
+    def close(self, websocket):
+        websocket.close()
+
+    def close_with_reason(self, websocket, status, reason):
+        websocket.close(status, reason)
