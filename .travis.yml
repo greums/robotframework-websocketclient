@@ -1,0 +1,8 @@
+deploy:
+  provider: pypi
+  user: Greums
+  password:
+    secure: gtrln0LdwTgblIWyFSJD3fZi8vDbgGNEKm2P1jmUaldyTV6QUVvNYMqrMR1iDVyuWugg5GKggcT0P0FnusN0a4fmH9c6XrZqwKEenH/oX2ZEIvNT8Smq7CGTDBfD9vWp0nvlfm2kByWukZHgBmakd+Y80ayoECJQIINinDymSD8LvYZ1wIfbZvMC80JcAtr8eDj8cv5KJEBupWHYoYkb2MoDq0QH/qHReWeb1gMyQco0Ck/gjY/SLUPgq7c0NQ4KGLUGSB2xpXzQIf/i+u2CXa+IrwA/q8EV3kP3dB7a+QMpqzk/3+6GU77b+nd3zUEdJo8B38KX3FB9yoT9L1L2m1W3sbENPpL89BJNcMalJv7zYkTOrfVOvaHx6lVM5PjJAtPR8dLkiWC2QIeS/kvFRjPpbSrHyWHiQmOrFQiAx+L6KT+Q8jgNr9HPXvlz6u3dFx/X/3q1GGpFzHYEr4ErVrv76jnTQWpHTU9vSei7poazuDSD/5rh6ZPyO0MVDBxHE9deZrdM16U4p90mfLIdlw3vLHGfOwDclaIeUy0wUHIVkTe81ZeOvzDnB5LjSiMda3Dj2v50vLzhXd+4A/imK9DbWGjSiw/LM8FbUHdAd3NXRRQtpkCc3VH8Q4IQCFccLJ5+afXPoCsajehwaWWr93RsrPM6p3uAu4JJN3whr1o=
+  on:
+      tags: true
+  distributions: "sdist bdist_wheel"
