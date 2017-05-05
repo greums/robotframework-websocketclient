@@ -7,12 +7,12 @@ setup(
     name = 'robotframework-websocketclient',
     package_dir  = {'' : 'src'},
     packages = ['WebSocketClient'],
-    version = '1.1.0',
+    version = '1.2.0',
     description = '	Robot Framework keywords for websocket-client',
     author = 'Damien Le Bourdonnec',
     author_email = 'damien.lebourdonnec@gmail.com',
     url = 'https://github.com/greums/robotframework-websocketclient',
-    download_url = 'https://github.com/greums/robotframework-websocketclient/tarball/1.1.0',
+    download_url = 'https://github.com/greums/robotframework-websocketclient/tarball/1.2.0',
     keywords = ['robotframework', 'websocket'],
     install_requires=[
         'websocket-client'
