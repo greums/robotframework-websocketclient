@@ -96,13 +96,13 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-.. |Version| image:: https://img.shields.io/pypi/v/robotframework-websocketclient.svg
+.. |Version| image:: https://img.shields.io/pypi/v/robotframework-websocketclient.svg?colorB=ee2269
     :target: https://pypi.python.org/pypi/robotframework-websocketclient
     :alt: Package Version
 .. |Status| image:: https://img.shields.io/pypi/status/robotframework-websocketclient.svg
     :target: https://pypi.python.org/pypi/robotframework-websocketclient
     :alt: Development Status
-.. |Python| image:: https://img.shields.io/pypi/pyversions/robotframework-websocketclient.svg
+.. |Python| image:: https://img.shields.io/pypi/pyversions/robotframework-websocketclient.svg?colorB=fcd20b
     :target: https://pypi.python.org/pypi/robotframework-websocketclient
     :alt: Python Version
 .. |License| image:: https://img.shields.io/pypi/l/robotframework-websocketclient.svg
