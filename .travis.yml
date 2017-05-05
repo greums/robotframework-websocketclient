@@ -1,3 +1,12 @@
+language: python
+
+branches:
+  only:
+    - master
+
+script:
+  - python setup.py sdist bdist_wheel
+
 deploy:
   provider: pypi
   user: Greums
