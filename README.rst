@@ -6,7 +6,7 @@ Websocket testing library for Robot Framework
 Introduction
 ------------
 
-WebSocketClient is `Robot Framework`_ test library that uses the `Robot Framework WebSocketClient`_ module.
+WebSocketClient is `Robot Framework`_ test library that uses the `websocket-client`_ module.
 
 Example
 '''''''
@@ -112,7 +112,7 @@ OTHER DEALINGS IN THE SOFTWARE.
     :target: https://travis-ci.org/Greums/robotframework-websocketclient
     :alt: Build Status
 .. _Robot Framework: http://robotframework.org/
-.. _Robot Framework WebSocketClient: https://github.com/Greums/robotframework-websocketclient
+.. _websocket-client: https://github.com/websocket-client/websocket-client
 .. _pip: https://pip.pypa.io/en/stable/
 .. _Robot Framework User Guide: http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
 .. _Robot Framework Documentation: http://robotframework.org/robotframework/
