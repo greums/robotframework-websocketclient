@@ -1,12 +1,10 @@
-IMAP email testing library for Robot Framework
+Websocket testing library for Robot Framework
 ==============================================
-
-|Version| |Status| |Python| |Download| |License|
 
 Introduction
 ------------
 
-WebSocketClient is [Robot Framework](http://code.google.com/p/robotframework/) test library that uses the [websocket-client](https://github.com/liris/websocket-client) module.
+WebSocketClient is `Robot Framework`_ test library that uses the `Robot Framework WebSocketClient`_ module.
 
 Examples
 ''''''''
@@ -93,3 +91,9 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+.. _Robot Framework: http://goo.gl/lES6WM
+.. _Robot Framework WebSocketClient: https://github.com/Greums/robotframework-websocketclient
+.. _pip: https://pip.pypa.io/en/stable/
+.. _Robot Framework User Guide: http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
+.. _Robot Framework Documentation: http://robotframework.org/robotframework/
