@@ -11,7 +11,7 @@ before_script:
   - export PYTHONPATH=$PYTHONPATH:$(pwd)/src
 
 script:
-  - coverage run --source $MODULE_DIR -m pytest
+  - coverage run --source $MODULE_DIR --module pytest
   - coverage report
   - pylint --errors-only $MODULE_DIR
   - robot --dotted example
