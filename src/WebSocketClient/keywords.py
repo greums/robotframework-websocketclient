@@ -3,8 +3,8 @@ from websocket import create_connection
 
 class WebSocketClientKeywords:
 
-    def connect(self, URL, timeout=None, **options):
-        return create_connection(URL, timeout, **options)
+    def connect(self, url, timeout=None, **options):
+        return create_connection(url, timeout, **options)
 
     def gettimeout(self, websocket):
         return websocket.gettimeout()
