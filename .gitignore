@@ -3,6 +3,7 @@
 *.egg-info
 *.egg
 .cache
+.coverage
 .idea
 build
 dist

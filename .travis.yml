@@ -4,13 +4,17 @@ env:
   - MODULE_DIR=src/WebSocketClient/
 
 install:
+  - pip install .
   - pip install -U pytest codecov pylint
 
+before_script:
+  - export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+
 script:
-  - robot --dotted example
   - coverage run --source $MODULE_DIR -m pytest
   - coverage report
   - pylint --errors-only $MODULE_DIR
+  - robot --dotted example
 
 after_success:
   - codecov
