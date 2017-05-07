@@ -2,7 +2,8 @@ language: python
 
 install:
   - pip install .
-  - pip install pytest
+  - pip install -U pytest
+  - pip list
 
 script:
   - pytest
