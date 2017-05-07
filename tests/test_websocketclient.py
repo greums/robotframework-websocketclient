@@ -1,57 +1,55 @@
 import sys
+
 sys.path.append('src')
 
 from WebSocketClient import WebSocketClient
 
-
-def test_connect():
-    ws = WebSocketClient()
-    ws.connect('ws://echo.websocket.org')
+WEBSOCKET_URL = 'ws://echo.websocket.org'
 
 
-def test_gettimeout():
-    pass
+class TestWebSocketClient(object):
 
+    def setup_class(self):
+        self.sock = WebSocketClient()
+        self.ws = self.sock.connect(WEBSOCKET_URL)
 
-def test_settimeout():
-    pass
+    def test_connect(self):
+        self.sock.connect(WEBSOCKET_URL)
 
+    def test_gettimeout(self):
+        pass
 
-def test_getsubprotocol():
-    pass
+    def test_settimeout(self):
+        pass
 
+    def test_getsubprotocol(self):
+        pass
 
-def test_getstatus():
-    pass
+    def test_getstatus(self):
+        pass
 
+    def test_getheaders(self):
+        pass
 
-def test_getheaders():
-    pass
+    def test_send(self):
+        self.sock.send(self.ws, 'Hello, world')
 
+    def test_send_binary(self):
+        pass
 
-def test_send():
-    pass
+    def test_ping(self):
+        pass
 
+    def test_pong(self):
+        pass
 
-def test_send_binary():
-    pass
+    def test_recv(self):
+        self.sock.send(self.ws, 'Hello, world')
+        data = self.sock.recv(self.ws)
+        assert data == 'Hello, world'
 
+    def test_recv_data(self):
+        pass
 
-def test_ping():
-    pass
-
-
-def test_pong():
-    pass
-
-
-def test_recv():
-    pass
-
-
-def test_recv_data():
-    pass
-
-
-def test_send_close():
-    pass
+    def test_send_close(self):
+        pass
