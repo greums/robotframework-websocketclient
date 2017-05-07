@@ -9,7 +9,8 @@ install:
 
 script:
   - robot example
-  - coverage run --source $MODULE_DIR -m pytest --verbose
+  - coverage run --source $MODULE_DIR -m pytest
+  - coverage report
   - pylint --errors-only $MODULE_DIR
 
 after_success:
