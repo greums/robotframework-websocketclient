@@ -2,6 +2,7 @@
 *.py[cod]
 *.egg-info
 *.egg
+.cache
 .idea
 build
 dist
