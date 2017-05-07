@@ -1,7 +1,7 @@
 from websocket import create_connection
 
 
-class WebSocketClientKeywords:
+class WebSocketClientKeywords(object):
 
     def connect(self, url, timeout=None, **options):
         return create_connection(url, timeout, **options)
