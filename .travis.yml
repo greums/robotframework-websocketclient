@@ -5,14 +5,13 @@ env:
 
 install:
   - pip install .
-  - pip install -U pytest codecov pylint
+  - pip install -U codecov pylint pytest pytest-cov
 
 before_script:
   - export PYTHONPATH=$PYTHONPATH:$(pwd)/src
 
 script:
-  - coverage run --source $MODULE_DIR --module pytest
-  - coverage report
+  - pytest --cov $MODULE_DIR tests/
   - pylint --errors-only $MODULE_DIR
   - robot --dotted example
 
