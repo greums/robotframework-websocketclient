@@ -1,6 +1,10 @@
 Websocket testing library for Robot Framework
 =============================================
 
+.. image:: https://api.codacy.com/project/badge/Grade/72fff62107514ca8a9ab9cba4ef3b48b
+   :alt: Codacy Badge
+   :target: https://www.codacy.com/app/Greums/robotframework-websocketclient?utm_source=github.com&utm_medium=referral&utm_content=Greums/robotframework-websocketclient&utm_campaign=badger
+
 |Version| |Status| |Python| |License| |Build| |Coverage| |Codacy|
 
 Introduction
