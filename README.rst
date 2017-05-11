@@ -114,8 +114,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 .. |Coverage| image:: https://img.shields.io/codecov/c/github/Greums/robotframework-websocketclient.svg
     :target: https://codecov.io/gh/Greums/robotframework-websocketclient
     :alt: Code Coverage
-.. |Codacy| image:: https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686/master.svg
-    :target: https://www.codacy.com/app/Greums/robotframework-websocketclient
+.. |Codacy| image:: https://api.codacy.com/project/badge/Grade/72fff62107514ca8a9ab9cba4ef3b48b
+    :target: https://www.codacy.com/app/Greums/robotframework-websocketclient?utm_source=github.com&utm_medium=referral&utm_content=Greums/robotframework-websocketclient&utm_campaign=badger
     :alt: Codacy Ranking
 .. _Robot Framework: http://robotframework.org/
 .. _websocket-client: https://github.com/websocket-client/websocket-client
