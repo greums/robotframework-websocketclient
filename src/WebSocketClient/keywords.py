@@ -3,50 +3,66 @@ from websocket import create_connection
 
 class WebSocketClientKeywords(object):
 
-    def connect(self, url, timeout=None, **options):
+    @staticmethod
+    def connect(url, timeout=None, **options):
         return create_connection(url, timeout, **options)
 
-    def gettimeout(self, websocket):
+    @staticmethod
+    def gettimeout(websocket):
         return websocket.gettimeout()
 
-    def settimeout(self, websocket, timeout):
+    @staticmethod
+    def settimeout(websocket, timeout):
         websocket.settimeout(timeout)
 
-    def getsubprotocol(self, websocket):
+    @staticmethod
+    def getsubprotocol(websocket):
         return websocket.getsubprotocol()
 
-    def getstatus(self, websocket):
+    @staticmethod
+    def getstatus(websocket):
         return websocket.getstatus()
 
-    def getheaders(self, websocket):
+    @staticmethod
+    def getheaders(websocket):
         return websocket.getheaders()
 
-    def send(self, websocket, message):
+    @staticmethod
+    def send(websocket, message):
         return websocket.send(message)
 
-    def send_binary(self, websocket, payload):
+    @staticmethod
+    def send_binary(websocket, payload):
         return websocket.send_binary(payload)
 
-    def ping(self, websocket, payload=""):
+    @staticmethod
+    def ping(websocket, payload=""):
         websocket.ping(payload)
 
-    def pong(self, websocket, payload=""):
+    @staticmethod
+    def pong(websocket, payload=""):
         websocket.pong(payload)
 
-    def recv(self, websocket):
+    @staticmethod
+    def recv(websocket):
         return websocket.recv()
 
-    def recv_data(self, websocket, control_frame=False):
+    @staticmethod
+    def recv_data(websocket, control_frame=False):
         return websocket.recv_data(control_frame)
 
-    def send_close(self, websocket):
+    @staticmethod
+    def send_close(websocket):
         websocket.send_close()
 
-    def send_close_with_reason(self, websocket, status, reason):
+    @staticmethod
+    def send_close_with_reason(websocket, status, reason):
         websocket.send_close(status, reason)
 
-    def close(self, websocket):
+    @staticmethod
+    def close(websocket):
         websocket.close()
 
-    def close_with_reason(self, websocket, status, reason):
+    @staticmethod
+    def close_with_reason(websocket, status, reason):
         websocket.close(status, reason)
