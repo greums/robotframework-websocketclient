@@ -1,12 +1,28 @@
 import codecs
+import io
+import re
 from os.path import abspath, dirname, join
 
 from setuptools import setup, find_packages
 
 LIBRARY_NAME = 'WebSocketClient'
 CWD = abspath(dirname(__file__))
-VERSION_PATH = join(CWD, 'src', LIBRARY_NAME, 'version.py')
-exec (compile(open(VERSION_PATH).read(), VERSION_PATH, 'exec'))
+
+
+def read(*names, **kwargs):
+    with io.open(join(dirname(__file__), *names), encoding=kwargs.get("encoding", "utf8")) as fp:
+        return fp.read()
+
+
+def find_version(*file_paths):
+    version_file = read(*file_paths)
+    version_match = re.search(r"^VERSION = ['\"]([^'\"]*)['\"]", version_file, re.M)
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError("Unable to find version string.")
+
+
+VERSION = find_version(join(CWD, 'src', LIBRARY_NAME), "version.py")
 
 with codecs.open(join(CWD, 'README.rst'), encoding='utf-8') as reader:
     LONG_DESCRIPTION = reader.read()
