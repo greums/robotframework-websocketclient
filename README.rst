@@ -1,7 +1,7 @@
 Websocket testing library for Robot Framework
 =============================================
 
-|Version| |Status| |Python| |License| |Build| |Coverage|
+|Version| |Status| |Python| |License| |Build| |Coverage| |Codacy|
 
 Introduction
 ------------
@@ -111,9 +111,12 @@ OTHER DEALINGS IN THE SOFTWARE.
 .. |Build| image:: https://img.shields.io/travis/Greums/robotframework-websocketclient.svg
     :target: https://travis-ci.org/Greums/robotframework-websocketclient
     :alt: Build Status
-.. |Coverage|  image:: https://img.shields.io/codecov/c/github/Greums/robotframework-websocketclient.svg
+.. |Coverage| image:: https://img.shields.io/codecov/c/github/Greums/robotframework-websocketclient.svg
     :target: https://codecov.io/gh/Greums/robotframework-websocketclient
     :alt: Code Coverage
+.. |Codacy| image:: https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686/master.svg
+    :target: https://www.codacy.com/app/Greums/robotframework-websocketclient
+    :alt: Codacy Ranking
 .. _Robot Framework: http://robotframework.org/
 .. _websocket-client: https://github.com/websocket-client/websocket-client
 .. _pip: https://pip.pypa.io/en/stable/
