@@ -29,9 +29,8 @@ after_success:
 jobs:
   include:
     - stage: deploy
-      script: echo "Publishing to PyPi ..."
+      script: skip
       python: 2.7
-      skip_cleanup: true
       deploy:
         provider: pypi
         user: Greums
@@ -41,6 +40,7 @@ jobs:
           tags: true
           branch: master
         distributions: sdist bdist_wheel
+      skip_cleanup: true
 
 notifications:
   slack:
