@@ -30,6 +30,7 @@ jobs:
   include:
     - stage: deploy
       script: echo "Deploying to PyPi ..."
+      skip_cleanup: true
       python: 2.7
       deploy:
         provider: pypi
