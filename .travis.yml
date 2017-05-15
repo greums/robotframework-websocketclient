@@ -1,5 +1,15 @@
 language: python
 
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+
 env:
   - MODULE_DIR=src/WebSocketClient/
 
@@ -19,15 +29,19 @@ after_success:
   - codecov
   - python setup.py sdist bdist_wheel
 
-deploy:
-  provider: pypi
-  user: Greums
-  password:
-    secure: MqmE9eF6JAKjLscsM9uloPHozB3qmtJJcjFfHWm6DhmHJ0kAIZfnVpAEWUys0jXD1Y+n1TewJjsL1Y5suFlENx83mHxQuCAQm2X6cPWiKASrOablwkrw6qWQgRFUrJW1NSlFQEG6oLSHfdAQljIhQw7gi7AfkHoFbiwcC5eVMTUtjhuR1xKRms9dLMYHvMQpDKtNwxGbDmusdk2UODETpaSN05tHwe9+GnJaE7sOD53ecpNl++PRsHjTGIqvXv2wQcvlBnSTQ4LNpAyCmINOvYPQrjcPPCGjXWyPegj61YNYGiY1OSmUCnKfgfzBptZmzOJ37NUtYAEntGhh3VTbczXK7NWQ1cpYkHS+s2kgKgzyR3ihBT2guN53wUoJIKS/YhpeZz7YlaZ4re0zTPkpt5Clej9TOPghp3h7D2NcFK4IalD2prcajWP9OYLDYq/k0aaIDKwptGinFe1/PAvH+PgWOAOg4JuLk+Ks4D5UT7B/tM8EfY5NsANwKJE+HHemySmlEqDTIkgUG0YuKBKKK2ZOvs4Tu/CakFXoWzCSZv/9TavR4d/G9aqp6qOyaxmHjT/whdpnvId4ndXy103BcaFOHv53lk1mYc3fO3DbKYwC4gBjgYPd+GGjaYBBWm9LsQxELLZcZVTH0sieKFcVlELj/Z/9ZkFjzmhme5xKBAk=
-  on:
-    tags: true
-    branch: master
-  distributions: sdist bdist_wheel
+jobs:
+  include:
+    - stage: deploy
+      script: echo "Deploying to PyPi ..."
+      deploy:
+        provider: pypi
+        user: Greums
+        password:
+          secure: MqmE9eF6JAKjLscsM9uloPHozB3qmtJJcjFfHWm6DhmHJ0kAIZfnVpAEWUys0jXD1Y+n1TewJjsL1Y5suFlENx83mHxQuCAQm2X6cPWiKASrOablwkrw6qWQgRFUrJW1NSlFQEG6oLSHfdAQljIhQw7gi7AfkHoFbiwcC5eVMTUtjhuR1xKRms9dLMYHvMQpDKtNwxGbDmusdk2UODETpaSN05tHwe9+GnJaE7sOD53ecpNl++PRsHjTGIqvXv2wQcvlBnSTQ4LNpAyCmINOvYPQrjcPPCGjXWyPegj61YNYGiY1OSmUCnKfgfzBptZmzOJ37NUtYAEntGhh3VTbczXK7NWQ1cpYkHS+s2kgKgzyR3ihBT2guN53wUoJIKS/YhpeZz7YlaZ4re0zTPkpt5Clej9TOPghp3h7D2NcFK4IalD2prcajWP9OYLDYq/k0aaIDKwptGinFe1/PAvH+PgWOAOg4JuLk+Ks4D5UT7B/tM8EfY5NsANwKJE+HHemySmlEqDTIkgUG0YuKBKKK2ZOvs4Tu/CakFXoWzCSZv/9TavR4d/G9aqp6qOyaxmHjT/whdpnvId4ndXy103BcaFOHv53lk1mYc3fO3DbKYwC4gBjgYPd+GGjaYBBWm9LsQxELLZcZVTH0sieKFcVlELj/Z/9ZkFjzmhme5xKBAk=
+        on:
+          tags: true
+          branch: master
+        distributions: sdist bdist_wheel
 
 notifications:
   slack:
