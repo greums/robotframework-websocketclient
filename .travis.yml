@@ -1,19 +1,7 @@
 language: python
 
-env:
-  - MODULE_DIR=src/WebSocketClient/
-
-install:
-  - pip install .
-  - pip install -U codecov pylint pytest pytest-cov
-
-before_script:
-  - export PYTHONPATH=$PYTHONPATH:$(pwd)/src
-
 script:
-  - pytest --cov $MODULE_DIR tests/
-  - pylint --errors-only $MODULE_DIR
-  - robot --dotted example
+  - tox
 
 after_success:
   - codecov
