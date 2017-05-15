@@ -29,6 +29,7 @@ after_success:
 jobs:
   include:
     - stage: deploy
+      script: echo "Publishing to PyPi ..."
       python: 2.7
       skip_cleanup: true
       deploy:
