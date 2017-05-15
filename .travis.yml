@@ -17,17 +17,17 @@ install:
 before_script:
   - export PYTHONPATH=$PYTHONPATH:$(pwd)/src
 
+script:
+  - pytest --cov $MODULE_DIR tests/
+  - pylint --errors-only $MODULE_DIR
+  - robot --dotted example
+
+after_success:
+  - codecov
+  - python setup.py sdist bdist_wheel
+
 jobs:
   include:
-    - stage: test
-      script:
-        - pytest --cov $MODULE_DIR tests/
-        - codecov
-        - pylint --errors-only $MODULE_DIR
-        - robot --dotted example
-    - stage: build
-      script:
-        - python setup.py sdist bdist_wheel
     - stage: deploy
       python: 2.7
       skip_cleanup: true
